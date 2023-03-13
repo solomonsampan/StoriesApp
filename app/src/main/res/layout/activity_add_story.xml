@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStory">
+
+    <ImageView
+        android:id="@+id/iv_addstory_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_leftarrow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD STORY"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/tv_login_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_addstory_back"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/tv_login_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_addstory_back"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_margin="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dialog_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/iv_addstory_back"
+        app:startIconDrawable="@drawable/ic_userlogin"
+        app:errorIconDrawable="@null"
+        app:startIconTint="@color/primary"
+        app:boxBackgroundColor="@color/white"
+        app:helperTextTextAppearance="@style/Theme.MaterialComponents"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_dialog_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="text"
+            android:hint="Author" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dialog_story_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/dialog_author"
+        app:startIconDrawable="@drawable/ic_title"
+        app:errorIconDrawable="@null"
+        app:startIconTint="@color/primary"
+        app:boxBackgroundColor="@color/white"
+        app:helperTextTextAppearance="@style/Theme.MaterialComponents"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_story_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="text"
+            android:hint="Title" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_dialog_story"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_story_title"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="top|start"
+        android:hint="Write your story"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="10"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_story"
+        android:drawablePadding="10dp"
+        android:theme="@style/MyHintStyle"
+        android:backgroundTint="@color/primary"
+        android:minLines="2"
+        android:scrollbars="vertical" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_dialog_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_dialog_story"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toStartOf="@+id/btn_dialog_submit"
+        android:text="cancel" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_dialog_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/et_dialog_story" />
+
+</RelativeLayout>

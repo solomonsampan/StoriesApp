@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:visibility="gone"
+        android:background="@color/primary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_margin="10dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/app_icon"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-45dp"
+            app:loopCount="1"
+            android:src="@drawable/storyicon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/primary"
+            android:layout_marginTop="45dp"
+            android:text="sign in"
+            android:layout_below="@+id/app_icon"
+            android:layout_marginHorizontal="15dp"
+            android:padding="10dp"
+            app:cornerRadius="15dp"
+            app:iconGravity="textEnd"
+            app:iconPadding="20dp"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp"
+            app:backgroundTint="@color/primary"
+            android:text="sign up"
+            android:layout_below="@+id/login"
+            android:layout_marginHorizontal="15dp"
+            android:padding="10dp"
+            app:cornerRadius="15dp"
+            app:iconGravity="textEnd"
+            app:iconPadding="20dp"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

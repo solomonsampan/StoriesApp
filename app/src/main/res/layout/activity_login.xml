@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/sv_login"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/iv_login_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_leftarrow" />
+
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/loginicon"
+        android:layout_margin="20dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_login"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-10dp"
+        android:padding="5dp"
+        android:text="LOGIN"
+        android:fontFamily="@font/loginfont"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:textSize="45sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        app:startIconDrawable="@drawable/ic_userlogin"
+        app:errorIconDrawable="@null"
+        app:startIconTint="@color/primary"
+        app:boxBackgroundColor="@color/white"
+        app:helperTextTextAppearance="@style/Theme.MaterialComponents"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_login_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="text"
+            android:hint="Email" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--End Username-->
+    <!--Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/primary"
+        android:layout_below="@+id/login_username"
+        app:startIconDrawable="@drawable/ic_pass"
+        app:errorIconDrawable="@null"
+        app:startIconTint="@color/primary"
+        app:boxBackgroundColor="@color/white"
+        app:helperTextTextAppearance="@style/Theme.MaterialComponents"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:hint="Password" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--End TextFields Linear Layout -->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_forgotpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/login_password"
+        android:layout_gravity="right">
+
+        <TextView
+            android:id="@+id/tv_login_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:textSize="13sp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:gravity="right" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Sign In button Layout-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_forgotpass"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginStart="10dp"
+        android:gravity="right">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            app:backgroundTint="@color/primary"
+            android:layout_marginTop="45dp"
+            android:text="sign in"
+            android:layout_below="@+id/app_icon"
+            android:layout_marginHorizontal="15dp"
+            android:padding="10dp"
+            app:cornerRadius="15dp"
+            app:iconGravity="textEnd"
+            app:iconPadding="20dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_login_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Signup"
+            android:textSize="13sp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:gravity="right" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
+</ScrollView>
