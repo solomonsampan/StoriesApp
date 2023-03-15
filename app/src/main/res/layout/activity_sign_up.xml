@@ -171,7 +171,7 @@
                 android:inputType="textPassword"
                 android:paddingBottom="18dp"
                 android:singleLine="true"
-                android:drawableStart="@drawable/ic_loginpass"
+                android:drawableStart="@drawable/ic_pass"
                 android:drawablePadding="10dp"
                 android:text=""
                 android:theme="@style/MyHintStyle" />

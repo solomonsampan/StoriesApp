@@ -15,7 +15,6 @@ import java.util.*
 class UsersRecyclerAdapter (var listUsers: List<UserData>) : RecyclerView.Adapter<UsersRecyclerAdapter.UserViewHolder>() {
 
     private var filteredNameList: List<UserData>? = null
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
 
         val itemView = LayoutInflater.from(parent.context)

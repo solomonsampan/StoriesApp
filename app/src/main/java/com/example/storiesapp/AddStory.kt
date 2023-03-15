@@ -47,8 +47,10 @@ class AddStory : AppCompatActivity() {
 
         iv_addstory_back.setOnClickListener {
 
-            val useract_intent = Intent(this, UserActivity::class.java)
-            startActivity(useract_intent)
+            val useractintent = Intent(this, UserActivity::class.java)
+            useractintent.putExtra("email", tv_login_email!!.text.toString().trim { it <= ' ' })
+            useractintent.putExtra("username", tv_login_username!!.text.toString().trim { it <= ' ' })
+            startActivity(useractintent)
             finish()
         }
 
